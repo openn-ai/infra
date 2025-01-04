@@ -26,3 +26,9 @@ jobs:
       with:
         role-to-assume: arn:aws:iam::854955106828:role/oidc-role
         aws-region: ${{ env.AWS_REGION }}
+
+    - uses: opentofu/setup-opentofu@v1
+    - run: tofu init
+
+    - id: plan
+      run: tofu plan -no-color
