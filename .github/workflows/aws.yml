@@ -1,4 +1,4 @@
-name: Deploy to Amazon S3
+name: terraform
 
 on:
   push:
