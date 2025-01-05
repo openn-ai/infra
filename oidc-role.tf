@@ -22,23 +22,24 @@ resource "aws_iam_role" "oidc-role" {
       Version = "2012-10-17"
     }
   )
+}
 
-  inline_policy {
-    name = "openn-ai-management"
-    policy = jsonencode(
-      {
-        Statement = [
-          {
-            Action = "s3:GetObject"
-            Effect = "Allow"
-            Resource = [
-              "arn:aws:s3:::openn-ai/*",
-              "arn:aws:s3:::openn-ai",
-            ]
-          },
-        ]
-        Version = "2012-10-17"
-      }
-    )
-  }
+resource "aws_iam_role_policy" "openn-ai-management" {
+  name = "openn-ai-management"
+  role = aws_iam_role.oidc-role.id
+  policy = jsonencode(
+    {
+      Statement = [
+        {
+          Action = "s3:GetObject"
+          Effect = "Allow"
+          Resource = [
+            "arn:aws:s3:::openn-ai/*",
+            "arn:aws:s3:::openn-ai",
+          ]
+        },
+      ]
+      Version = "2012-10-17"
+    }
+  )
 }
