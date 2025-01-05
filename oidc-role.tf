@@ -58,6 +58,11 @@ resource "aws_iam_role_policy" "oidc-iam-get-role-policy" {
             "arn:aws:iam::${var.account_id}:role/*",
             "arn:aws:iam::${var.account_id}:policy/*"
           ]
+        },
+        {
+          Action = ["ec2:Describe*"]
+          Effect = "Allow"
+          Resource = "*"
         }
       ]
     }
