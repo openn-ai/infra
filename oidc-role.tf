@@ -52,7 +52,7 @@ resource "aws_iam_role_policy" "oidc-iam-get-role-policy" {
     {
       Statement = [
         {
-          Action = "iam:Get*"
+          Action = ["iam:Get*", "iam:List*"]
           Effect = "Allow"
           Resource = [
             aws_iam_role.oidc-role.arn
