@@ -31,7 +31,7 @@ resource "aws_iam_role_policy" "openn-ai-management" {
     {
       Statement = [
         {
-          Action = "s3:Get*"
+          Action = ["s3:Get*", "s3:List*"]
           Effect = "Allow"
           Resource = [
             aws_s3_bucket.openn-ai.arn,
