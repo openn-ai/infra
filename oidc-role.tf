@@ -34,8 +34,8 @@ resource "aws_iam_role_policy" "openn-ai-management" {
           Action = "s3:GetObject"
           Effect = "Allow"
           Resource = [
-            "arn:aws:s3:::openn-ai/*",
-            "arn:aws:s3:::openn-ai",
+            aws_s3_bucket.openn-ai.arn,
+            "${aws_s3_bucket.openn-ai.arn}/*"
           ]
         },
       ]
