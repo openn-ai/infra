@@ -31,7 +31,7 @@ resource "aws_iam_role_policy" "openn-ai-management" {
     {
       Statement = [
         {
-          Action = "s3:GetObject"
+          Action = "s3:Get*"
           Effect = "Allow"
           Resource = [
             aws_s3_bucket.openn-ai.arn,
@@ -52,7 +52,7 @@ resource "aws_iam_role_policy" "oidc-iam-get-role-policy" {
     {
       Statement = [
         {
-          Action = "iam:GetRolePolicy"
+          Action = "iam:Get*"
           Effect = "Allow"
           Resource = [
             aws_iam_role.oidc-role.arn
