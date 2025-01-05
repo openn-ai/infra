@@ -43,3 +43,22 @@ resource "aws_iam_role_policy" "openn-ai-management" {
     }
   )
 }
+
+resource "aws_iam_role_policy" "oidc-iam-get-role-policy" {
+  name = "oidc-policies"
+  role = aws_iam_role.oidc-role.id
+
+  policy = jsondecode(
+    {
+      Statement = [
+        {
+          Action = "iam:GetRolePolicy"
+          Effect = "Allow"
+          Resource = [
+            aws_iam_role.oidc-role.arn
+          ]
+        }
+      ]
+    }
+  )
+}
