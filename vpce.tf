@@ -7,4 +7,8 @@ resource "aws_vpc_endpoint" "openn-ai-s3-vpce" {
   route_table_ids = [
     aws_route_table.openn-ai-pri-rtb.id
   ]
+
+  tags = {
+    Name = "openn-ai-s3"
+  }
 }
