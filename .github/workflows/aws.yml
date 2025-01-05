@@ -35,3 +35,8 @@ jobs:
       env:
         TF_VAR_account_id: ${{ steps.creds.outputs.aws-account-id }}
       run: tofu plan -no-color
+
+    - id: apply
+      env:
+        TF_VAR_account_id: ${{ steps.creds.outputs.aws-account-id }}
+      run: tofu apply -auto-approve
