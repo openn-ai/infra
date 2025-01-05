@@ -48,7 +48,7 @@ resource "aws_iam_role_policy" "oidc-iam-get-role-policy" {
   name = "oidc-policies"
   role = aws_iam_role.oidc-role.id
 
-  policy = jsondecode(
+  policy = jsonencode(
     {
       Statement = [
         {
