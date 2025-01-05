@@ -22,6 +22,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Configure AWS credentials
+      id: creds
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: arn:aws:iam::854955106828:role/oidc-role
@@ -31,4 +32,6 @@ jobs:
     - run: tofu init
 
     - id: plan
+      env:
+        TF_VAR_account_id: ${{ steps.creds.outputs.aws-account-id }}
       run: tofu plan -no-color
