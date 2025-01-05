@@ -55,7 +55,8 @@ resource "aws_iam_role_policy" "oidc-iam-get-role-policy" {
           Action = ["iam:Get*", "iam:List*"]
           Effect = "Allow"
           Resource = [
-            aws_iam_role.oidc-role.arn,
+            "arn:aws:iam::${var.account_id}:role/*",
+            "arn:aws:iam::${var.account_id}:policy/*"
           ]
         }
       ]
