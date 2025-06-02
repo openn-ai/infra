@@ -1,20 +1,42 @@
-# This file is maintained automatically by "tofu init".
+# This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
 provider "registry.opentofu.org/hashicorp/aws" {
-  version     = "5.82.2"
-  constraints = "~> 5.0"
+  version = "5.99.1"
   hashes = [
-    "h1:9QRxRf9iCT7UPymoHdcif0DcKwKAM/PiQ75VBrl9W+o=",
-    "zh:0c662b1f27119941e2329155070c8a81f6979e3d5e98296949f373c46487d84e",
-    "zh:56cbaeaf050174bb9ba9a00f31fe441365ffece6ad39254885c9d4e6517e27e3",
-    "zh:6e7f66c9f9955deb9ce0a2ae4b6df366b3b6bc3e23bca1fcdd4351ecab3ec907",
-    "zh:7971a22df020391ca20936584282d01f3380bcfc79260afbdf04d6b4d50cf75a",
-    "zh:7b8f2175447e64c9a9c9624818a597cd6c1609f379f7f8e3e179ee7394a467b7",
-    "zh:a805e26eb7f58e46b130decab79c0871dfd73206d7bd6c1793e27c2dc35fd8b6",
-    "zh:b6163e746c77d47269c0e3014bdc1f805152b3d94471dd6443373d91b848cf45",
-    "zh:c46872fd0c304852bd506c036f31dbe047a97036992319a3c594949538651680",
-    "zh:d586f1ef412f336ede54d720a78f11a64952a39bfe401e141d24826530cb2449",
-    "zh:ddaf2e1de0f1660ac31c5f1bebd40cc2b29e19f64bf41591c3b5df00dc268367",
+    "h1:0jNckFqimGrHhRB88880ovIpmoE20xhjRb94GBdgjwo=",
+    "zh:13a07422f776dd97214dfa89d6a88340b99613cbb869013c756c1a68fd8cdd9d",
+    "zh:1841d422278afa25d42a8d3ea9197ad08cf092769bd2aa89056d25d4c2629df8",
+    "zh:269016c7ba09d76e42fbcf15de28f2de0595ff9a7304a0500011a4493d7a1551",
+    "zh:2b842c3d0f30e048c05a37752b9c07d316656f3caf79841d08a4f1b057555eb2",
+    "zh:6559eedc095f70a51460dc702613a9033734ba536c1de1ed86a735a3c8131e40",
+    "zh:6d43b2676630344db3a7d6ba8330d20993492168f124e19e040a0aa914ec832e",
+    "zh:7f5d5cb0c1a492080b668f456de50f5b91fc67018c05f12483added3faf703f6",
+    "zh:c3bb8094bf26565150229f1ca6014d41d1283b8a2b06a15b45cd5a6b4ce82e28",
+    "zh:e45bc994d0c6e1c0a0b70e8378f2f933e924f05c91061ed2a97ceaf282e08a25",
+    "zh:ee725d6fbc1dbaa5017e9eab6fa0aa7e107a4ed73a4a8e2acab6b5d3d54cd0e4",
+  ]
+}
+
+provider "registry.terraform.io/hashicorp/aws" {
+  version     = "5.99.1"
+  constraints = "5.99.1"
+  hashes = [
+    "h1:xgPyZArCfKVMy8sThzhb0IernbFy0fJGm897ztejZAQ=",
+    "zh:00b0a61c6d295300f0aa7a79a7d40e9f836164f1fff816d38324c148cd846887",
+    "zh:1ee9d5ccb67378704642db62113ac6c0d56d69408a9c1afb9a8e14b095fc0733",
+    "zh:2035977ed418dcb18290785c1eeb79b7133b39f718c470346e043ac48887ffc7",
+    "zh:67e3ca1bf7061900f81cf958d5c771a2fd6048c2b185bec7b27978349b173a90",
+    "zh:87fadbe5de7347ede72ad879ff8d8d9334103cd9aa4a321bb086bfac91654944",
+    "zh:901d170c457c2bff244a2282d9de595bdb3ebecc33a2034c5ce8aafbcff66db9",
+    "zh:92c07d6cf530679565b87934f9f98604652d787968cce6a3d24c148479b7e34b",
+    "zh:9b12af85486a96aedd8d7984b0ff811a4b42e3d88dad1a3fb4c0b580d04fa425",
+    "zh:a7d4803b4c5ff17f029f8b270c91480442ece27cec7922c38548bcfea2ac2d26",
+    "zh:afda848da7993a07d29018ec25ab6feda652e01d4b22721da570ce4fcc005292",
+    "zh:baaf16c98b81bad070e0908f057a97108ecd6e8c9f754d7a79b18df4c8453279",
+    "zh:c3dd496c5014427599d6b6b1c14c7ebb09a15df78918ae0be935e7bfa83b894c",
+    "zh:e2b84c1d40b3f2c4b1d74bf170b9e932983b61bac0e6dab2e36f5057ddcc997f",
+    "zh:e49c92cb29c53b4573ed4d9c946486e6bcfc1b63f1aee0c79cc7626f3d9add03",
+    "zh:efae8e339c4b13f546e0f96c42eb95bf8347de22e941594849b12688574bf380",
   ]
 }
